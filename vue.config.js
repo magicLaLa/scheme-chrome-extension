@@ -66,8 +66,6 @@ module.exports = {
     }
   },
   chainWebpack: config => {
-    config.resolve.alias
-      .set('@', path.resolve('src'));
     // 处理字体文件名，去除hash值
     const fontsRule = config.module.rule("fonts");
     // 清除已有的所有 loader。

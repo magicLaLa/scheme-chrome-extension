@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <div>测试</div>
+    <CollapseTemp />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import CollapseTemp from '@/popup/components/CollapseTemp.vue';
 
-@Component
-export default class App extends Vue {}
+@Component({
+  name: 'Popup',
+  components: {
+    CollapseTemp,
+  },
+})
+export default class Popup extends Vue {}
 </script>
 
 <style lang="scss">
@@ -18,6 +24,6 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 500px;
 }
 </style>

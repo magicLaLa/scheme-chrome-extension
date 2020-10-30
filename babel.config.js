@@ -4,10 +4,10 @@ module.exports = {
   ],
   plugins: [
     [
-      "import",
+      "component",
       {
-          "libraryName": "view-design",
-          "libraryDirectory": "src/components"
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
       }
     ],
     "@babel/plugin-proposal-optional-chaining",
