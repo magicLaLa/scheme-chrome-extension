@@ -1,9 +1,26 @@
 import Vue from 'vue';
 import App from './App.vue';
-import { Collapse, CollapseItem } from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import {
+  Collapse,
+  CollapseItem,
+  Form,
+  FormItem,
+  Input,
+  Button,
+  Message,
+  Alert,
+} from 'element-ui';
 
 Vue.use(Collapse)
-  .use(CollapseItem);
+  .use(CollapseItem)
+  .use(Form)
+  .use(FormItem)
+  .use(Input)
+  .use(Button)
+  .use(Alert);
+
+Vue.prototype.$message = Message;
 
 Vue.config.productionTip = false;
 
