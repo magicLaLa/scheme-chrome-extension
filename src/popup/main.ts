@@ -10,6 +10,8 @@ import {
   Button,
   Message,
   Alert,
+  Card,
+  Tooltip,
 } from 'element-ui';
 
 Vue.use(Collapse)
@@ -18,7 +20,9 @@ Vue.use(Collapse)
   .use(FormItem)
   .use(Input)
   .use(Button)
-  .use(Alert);
+  .use(Alert)
+  .use(Card)
+  .use(Tooltip);
 
 Vue.prototype.$message = Message;
 

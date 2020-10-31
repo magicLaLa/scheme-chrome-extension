@@ -1,11 +1,11 @@
 {
 	"manifest_version": 2,
-	"name": "vue-chrome-extension",
-	"description": "基于vue的chrome插件",
-	"version": "1.0.0",
+	"name": "scheme-chrome-extension",
+	"description": "scheme 生成、分析、转换",
+	"version": "0.0.1",
 	"browser_action": {
 		"default_title": "vue-chrome-extension",
-		"default_icon": "assets/logo.png",
+		"default_icon": "assets/scheme-128.png",
 		"default_popup": "popup.html"
 	},
 	"permissions": [
@@ -20,9 +20,9 @@
 		"activeTab"
 	],
 	"icons": {
-		"16": "assets/logo.png",
-		"48": "assets/logo.png",
-		"128": "assets/logo.png"
+		"16": "assets/scheme-16.png",
+		"48": "assets/scheme-48.png",
+		"128": "assets/scheme-128.png"
 	},
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 	"web_accessible_resources": ["fonts/*"]

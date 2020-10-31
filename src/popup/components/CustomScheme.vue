@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="custom-scheme">
     <el-form
       :model="ruleForm"
       :rules="rules"
@@ -20,7 +20,7 @@
         <el-input
           type="text"
           v-model="ruleForm.pagePath"
-          placeholder="pages/index/index?cannel=xxxx"
+          placeholder="pages/index/index?channel=xxxx&other=xxx"
           autocomplete="off"
         ></el-input>
       </el-form-item>
@@ -112,8 +112,7 @@ export default class CustomScheme extends Vue {
 </script>
 
 <style lang="scss">
-.description {
-  word-break: break-all;
-  word-wrap: break-word;
+.custom-scheme {
+  padding-left: 20px;
 }
 </style>
