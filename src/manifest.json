@@ -9,14 +9,7 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": [
-		"webRequestBlocking",
-		"notifications",
 		"tabs",
-		"webRequest",
-		"http://*/",
-		"https://*/",
-		"<all_urls>",
-		"storage",
 		"activeTab"
 	],
 	"icons": {
