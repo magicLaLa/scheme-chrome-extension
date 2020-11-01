@@ -104,7 +104,7 @@ export default class CustomScheme extends Vue {
     } else {
       afterPage += (query && `?${query}`) || '';
     }
-    this.alertText = beforePage + afterPage;
+    this.alertText = beforePage + `${encodeURIComponent(afterPage)}`;
     this.isAlert = true;
   }
 }
