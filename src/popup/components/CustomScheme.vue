@@ -40,7 +40,7 @@
       </el-form-item>
     </el-form>
     <el-alert
-      v-show="isAlert"
+      v-if="isAlert"
       :closable="false"
       :center="false"
       type="success"
