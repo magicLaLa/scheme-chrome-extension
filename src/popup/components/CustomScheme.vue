@@ -8,6 +8,14 @@
       ref="ruleForm"
       label-width="100px"
     >
+      <el-form-item label="protocol" prop="protocol">
+        <el-input
+          type="text"
+          v-model="ruleForm.protocol"
+          placeholder="小程序协议头"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
       <el-form-item label="appId" prop="appId">
         <el-input
           type="text"
@@ -61,11 +69,19 @@ import { ElForm } from 'element-ui/types/form';
 })
 export default class CustomScheme extends Vue {
   private ruleForm: PopupSpace.RuleForm = {
+    protocol: 'alipays://platformapi/startapp',
     appId: '',
     pagePath: '',
     query: '',
   };
   private rules: PopupSpace.Rules = {
+    protocol: [
+      {
+        required: true,
+        validator: notEmpty('protocol'),
+        trigger: 'blur',
+      },
+    ],
     appId: [
       {
         required: true,
@@ -91,8 +107,8 @@ export default class CustomScheme extends Vue {
   private submitForm(formName: string) {
     (this.$refs[formName] as ElForm).validate((valid) => {
       if (valid) {
-        const { appId, pagePath, query } = this.ruleForm;
-        let scheme = `alipays://platformapi/startapp?appId=${appId}&page=${encodeURIComponent(
+        const { appId, pagePath, query, protocol } = this.ruleForm;
+        let scheme = `${protocol}?appId=${appId}&page=${encodeURIComponent(
           pagePath,
         )}`;
         if (query) {

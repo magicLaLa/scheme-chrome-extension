@@ -76,7 +76,7 @@ export default class CustomScheme extends Vue {
 
   private getSplicingParams() {
     return {
-      head: getProtocolHead(this.input) || '',
+      protocol: getProtocolHead(this.input) || '',
       appid: getAppId(this.input) || '',
       query: getQuery(this.input) || '',
       page: getPageParams(this.input) || '',
@@ -84,8 +84,9 @@ export default class CustomScheme extends Vue {
   }
 
   private parsing() {
-    const { appid, query, page } = this.getSplicingParams();
+    const { appid, query, page, protocol } = this.getSplicingParams();
     this.cardObj = {
+      protocol,
       appid,
       query,
       page,
@@ -94,10 +95,9 @@ export default class CustomScheme extends Vue {
   }
 
   private onTransfer() {
-    const { appid, query, page, head } = this.getSplicingParams();
-    console.log('head', head);
+    const { appid, query, page, protocol } = this.getSplicingParams();
 
-    let beforePage = `${head}?appId=${appid}&page=`;
+    let beforePage = `${protocol}?appId=${appid}&page=`;
     let afterPage = `${page}`;
     if (page.includes('?')) {
       afterPage += (query && `&${query}`) || '';

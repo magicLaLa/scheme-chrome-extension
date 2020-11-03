@@ -1,5 +1,6 @@
 declare namespace PopupSpace {
   interface RuleForm {
+    protocol: string;
     appId: string;
     pagePath: string;
     query: string;
@@ -10,6 +11,7 @@ declare namespace PopupSpace {
     trigger: string;
   }
   interface Rules {
+    protocol: Validateor[],
     appId: Validateor[],
     pagePath:  Validateor[],
     query?:  Validateor[],

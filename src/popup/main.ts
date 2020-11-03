@@ -2,6 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import 'element-ui/lib/theme-chalk/index.css';
 import {
+  Container,
+  Header,
+  Main,
   Collapse,
   CollapseItem,
   Form,
@@ -14,7 +17,10 @@ import {
   Tooltip,
 } from 'element-ui';
 
-Vue.use(Collapse)
+Vue.use(Container)
+  .use(Header)
+  .use(Main)
+  .use(Collapse)
   .use(CollapseItem)
   .use(Form)
   .use(FormItem)
