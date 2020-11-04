@@ -1,6 +1,6 @@
 # scheme-chrome-extension
 
-[![Chrome-extensions](https://img.shields.io/badge/chrome-extensions-yellowgreen?logo=google-chrome&style=flat)]()
+[![Chrome-extensions](https://img.shields.io/badge/chrome-extensions-yellowgreen?logo=google-chrome&style=flat)](https://chrome.google.com/webstore/detail/scheme-chrome-extension/dmcjkbfoeglhodfbmnpjdlfeoimeejmk)
 [![Typescript](https://img.shields.io/badge/Typescript-~3.9.3-yellow)](https://www.typescriptlang.org/)
 [![Yarn](https://img.shields.io/badge/yarn-%3E%3D1.22.4-blue)](https://yarnpkg.com/)
 [![Version](https://img.shields.io/badge/version-0.0.1-orange)](https://github.com/magicLaLa/scheme-chrome-extension/blob/main/package.json)
