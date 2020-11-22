@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "scheme-chrome-extension",
-	"description": "scheme 生成、分析、转换",
-	"version": "0.0.1",
+	"description": "scheme 生成、分析、转换，暂时仅支持支付宝小程序",
+	"version": "0.0.2",
 	"browser_action": {
 		"default_title": "vue-chrome-extension",
 		"default_icon": "assets/scheme-128.png",
