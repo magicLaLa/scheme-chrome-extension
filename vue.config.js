@@ -1,5 +1,4 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ZipWebpackPlugin = require('zip-webpack-plugin');
 
 // 只需要复制的文件
@@ -35,11 +34,7 @@ chromeNames.map(name => {
   };
 });
 
-const plugins = [
-  new CopyWebpackPlugin({
-    patterns: copyFiles,
-  }),
-];
+const plugins = [];
 
 if (process.env.NODE_ENV === 'production') {
   plugins.push(
@@ -66,6 +61,9 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+
+    config.plugin('cpoy').use(require('copy-webpack-plugin'), [copyFiles]);
+
     // 处理字体文件名，去除hash值
     const fontsRule = config.module.rule("fonts");
     // 清除已有的所有 loader。
